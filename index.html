@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Up The Mountain</title>
 
@@ -11,26 +10,122 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- header section -->
+    <!-- header section --> 
 
 <header>
-    <a href="#" class="logo"> <img src="./images/logo.jpeg" alt="logo"></a>
-        <nav class="navbar">
+        <nav>
+           <img src="./images/logo.jpeg" alt="logo">
             <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#news">News</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a>
+                <div class='sub-menu'>
+                    <ul>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Vission</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#programs">Programs</a>
+            <div class='sub-menu'>
+                <ul>
+                    <li><a href="#">Bible Mission</a></li>
+                    <li><a href="#">Evangelization</a></li>
+                    <li><a href="#">Environmental Management</a></li>
+                    <li><a href="#">EcoTourism</a></li>
+                    <li><a href="#">Keep Fit</a></li>
+                    <li><a href="#">Livelihood Support</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#news">News</a>
+                <div class='sub-menu'>
+                    <ul>
+                        <li><a href="#">Upcoming Activities</a></li>
+                        <li><a href="#">Previous Activities</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="#campaigns">Campaigns</a></li>
             </ul>
+            <img src="./images/bar.png" class="menu-icon">
         </nav>
-
-        <div class="fas fa-bars"></div>
+        <div class="row">
+            <div>
+                <div class="content">
+                    
+                    <h1>Up<br> The Mountain</h1>
+                    <div class="line"></div>
+                    <p>Our Mission is to promote Christian virtues through witness,<br>
+                         conservation of nature and service to mankind</p><br>
+                    <p>Our Vission is to be a leader in application of bible teaching<br>
+                    to promote responsible citizenship.</p>
+                </div>
+            </div>
+        </div>
 </header>
-    
+<section class="programs">
+    <div class="title">
+        <h1>Our Programs</h1>
+        <div class="line"></div>
+    </div>
+    <div class="row2">
+        <div class="col2">
+            <img src="./images/bible.jpg">
+            <h4>Bible Mission</h4>
+            <p>Lorem ipsum dolor</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+        <div class="col2">
+            <img src="./images/evangelism.png">
+            <h4>Evangelization</h4>
+            <p>Lorem ipsum dolor</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+        
+        <div class="col2">
+            <img src="./images/environ.jpg">
+            <h4>Environmental Management</h4>
+            <p>Lorem ipsum dolor</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+        <div class="col2">
+            <img src="./images/ecotourism.jpeg">
+            <h4>Ecotourism</h4>
+            <p>Lorem ipsum dolor</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+        <div class="col2">
+            <img src="./images/fit.jpg">
+            <h4>Keep FIT</h4>
+            <p>Lorem ipsum dolor</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+        <div class="col2">
+            <img src="./images/livelihood.png">
+            <h4>Livelihood Support</h4>
+            <p>Lorem ipsum dolor</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+</div>
 
     <!-- js scripts -->
-    <script src="js/script.js"></script>
+    <script>
+        const menuBtn = document.querySelector('menu-icon')
+        const nav = document.querySelector('.nav')
+
+        menuBtn.addEventListener('click', ()=>{
+            nav.classList.toggle('mobile-menu')
+        })
+    </script>
 
 </body>
 </html>

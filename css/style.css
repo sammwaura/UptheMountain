@@ -1,125 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Readex+Pro:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
-* {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0; padding: 0;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
-    text-decoration: none;
-    transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
+    font-family: 'poppins' sans-serif;
 }
 
-html{
-    font-size: 62.5%;
+body, html{
     overflow-x: hidden;
 }
 
-body{
-    height: 3000px;
-}
-
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 1000;
-    padding: 1rem 5rem;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/mountain.jpg);
+    background-size: cover;
+    background-position: bottom; 
+    position: relative;  
 }
 
-header .navbar ul{
+
+
+
+nav{
+    padding: 30px 3%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
     list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+nav ul li :active{
+    color: crimson;
 }
 
-header .navbar ul li {
-    margin: 0 1rem;
-}
-
-header .navbar ul li a{
-    font-size: 1.5rem;
-    color: crimson
-}
-
-header .navbar ul li a:hover{
-    color: var(--lightblue);
-}
-
-header .fa-bars{
-    font-size: 3rem;
-    color: #666;
+nav ul li :hover{
     cursor: pointer;
+    color: crimson;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+.logo{
+    width: 32px;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 30px;
+    top: 50px;
+    right: 30px;
+    cursor: pointer;
+    position: absolute;
+}
+.sub-menu{
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries */
-@media (max-width:768px){
-
-    html{
-        font-size: 55%;
-    }
-    header .fa-bars{
-        display: block;
-    }
-
-    header .navbar{
-        position: fixed;
-        top: -100rem; left: 0;
-        width: 100%;
-        border-top: .1rem solid #ccc;
-        opacity: 0;
-    }
-
-    header .navbar ul{
-        flex-flow: column;
-        padding: 2rem 0;
-        background-color: #fff;
-    }
-
-    header .navbar ul li{
-        width: 100%;
-        text-align: center;
-        margin: 1rem 0;
-    }
-
-    header .navbar ul li a{
-        font-size: 3rem;
-        display: block;
-    }
-
-    .fa-times{
-        transform: rotate(180deg);
-    }
-
-    header .nav-toggle{
-        top:6rem;
-        opacity: 1;
-    }
-
+nav ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: darkcyan;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+nav ul li:hover .sub-menu ul li{
+    display: block;
+    margin: 10px;
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+nav ul li:hover .sub-menu ul li:last-child{
+    border-bottom: none;
+}
+nav ul li:hover .sub-menu ul li:hover{
+    color: crimson;
+}
+.row{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 8%;
+}
+.content h1{
+    font-size: 50px;
+    color: black;
+}
+.content p{
+    font-size: 20px;
+    color: whitesmoke;
 }
 
+.info  {
+    text-align: right;
+    margin: auto;
+    color: #fff;
+    width: 75%;
+    display: inline-block;
+    
+}
 
+.info h1{
+    font-size: 75px;
+}
 
+section{
+    width: 80px;
+    margin: 80px auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: #49497e;
+}
+/* programs */
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: #49497e;
+}
+.row2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.row .col2{
+    width: 80%;
+    flex-direction:column;
+    align-items: center;
+
+}
+.events .row2{
+    margin-top: 50px;
+}
+
+h4{
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+p{
+    color: #484872;
+    padding: 0px 40px;
+
+}
+.events .ctn{
+    margin-top: 30px;
+    
+}
+
+/* mobile devices */
+@media only screen and (max-width:850px){
+    nav{
+        padding: 0;
+
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: whitesmoke;
+        margin-top: -900px;
+    }
+    .menu-icon{
+        margin-top: 0px;
+    }
+    nav ul li{
+        margin: 30px auto;
+
+    }
+}
 
 

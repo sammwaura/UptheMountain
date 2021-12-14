@@ -1,8 +1,8 @@
-let menu = document.querySelector('.fa-bars');
-let navbar =  document.querySelector('.navbar');
+let menu = document.querySelector('.menu-icon');
+let nav =  document.querySelector('nav');
 
-menu.addEventListener('click', function(){
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('nav-toggle');
+menu.addEventListener('click', () =>{
+    nav.classList.toggle('mobile-menu');
+    
 });
 
