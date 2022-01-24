@@ -1,74 +1,61 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body, html{
-    overflow-x: hidden;
-}
-
-header{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/mountain.jpg);
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+    url(../images/mountain.jpg);
+    background-position: center;
     background-size: cover;
-    background-position: bottom; 
-    position: relative;  
+    position: relative;
 }
-
-
-
-
 nav{
-    padding: 30px 3%;
+    padding: 2% 6%;
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
 }
-nav ul{
+nav img{
+    width: 150px;
+}
+.nav-links{
     flex: 1;
     text-align: right;
 }
-nav ul li{
+.nav-links ul li{
     list-style: none;
     display: inline-block;
-    margin: 10px 30px;
+    padding: 8px 12px;
+    position: relative;
 }
-nav ul li :active{
-    color: crimson;
-}
-
-nav ul li :hover{
-    cursor: pointer;
-    color: crimson;
-}
-
-nav ul li a {
+.nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
-.logo{
-    width: 32px;
-    cursor: pointer;
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: crimson;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
 }
-.menu-icon {
-    width: 30px;
-    top: 50px;
-    right: 30px;
-    cursor: pointer;
-    position: absolute;
+.nav-links ul li:hover::after{
+    width: 100%;
 }
 .sub-menu{
     display: none;
 }
-
 nav ul li:hover .sub-menu{
     display: block;
     position: absolute;
-    background: darkcyan;
+    background: lightcoral;
     margin-top: 15px;
     margin-left: -15px;
 }
@@ -88,115 +75,202 @@ nav ul li:hover .sub-menu ul li:last-child{
 nav ul li:hover .sub-menu ul li:hover{
     color: crimson;
 }
-.row{
-    width: 75%;
+.text-box{
+    width: 90%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: absolute;
+    text-align: center;
     color: #fff;
-    margin-top: 8%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-.content h1{
-    font-size: 50px;
-    color: black;
+.text-box h1{
+    font-size: 62px;
 }
-.content p{
-    font-size: 20px;
-    color: whitesmoke;
-}
-
-.info  {
-    text-align: right;
-    margin: auto;
-    color: #fff;
-    width: 75%;
-    display: inline-block;
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: yellow;
     
 }
-
-.info h1{
-    font-size: 75px;
+nav .fa{
+    display: none;
+}
+/* about us */
+.about-section{
+    margin-top: 25px;
+    background: url(../images/about.webp);
+    background-size: 65%;
+    background-color: rgb(49, 80, 80);
+    overflow: hidden;
+    padding: 100px 0;
+    background-size: cover;
 }
 
-section{
-    width: 80px;
-    margin: 80px auto;
+.inner-container{
+    width: 30%;
+    float: right;
+    background-color:cornsilk;
+    padding: 150px;
+
 }
 
-.title{
-    text-align: center;
-    font-size: 4vmin;
-    color: #49497e;
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.border{
+    height: 3px;
+    width: 100px;
+    background-color: tomato;
+}
+.text{
+    font-size: 23px;
+    color: black;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+button{
+    margin-bottom: 5px;
+    border: none;
+    padding: 8px 15px;
+    background-color: tomato;
+    color: white;
+}
+button:hover{
+    text-decoration: underline;
 }
 /* programs */
-section{
+.program{
     width: 80%;
-    margin: 80px auto;
-}
-
-.title{
+    margin: auto;
+    margin-top: 20px;
     text-align: center;
-    font-size: 4vmin;
-    color: #49497e;
+    padding-top: 100px;
+    background-color: cornsilk;
 }
-.row2{
-    display: flex;
-    align-items: center;
-    width: 100%;
+.program h1{
+    font-size: 35px;
+    color: crimson;
+}
+.program p{
+    font-size: 18px;
+    line-height: 15px;
+}
+.row{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-
 }
-.row .col2{
-    width: 80%;
-    flex-direction:column;
-    align-items: center;
-
+.program-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
 }
-.events .row2{
-    margin-top: 50px;
+.program-col img{
+    width: 60%;
+    border-radius: 5px;
 }
-
-h4{
-    font-size: 3vmin;
-    color: #484872;
-    margin: 20px auto;
+.program-col p{
+    padding: 0;
+    line-height: 22px;
+    font-size: 18px;
 }
-p{
-    color: #484872;
-    padding: 0px 40px;
-
-}
-.events .ctn{
-    margin-top: 30px;
-    
+.program-col h4{
+    font-size: 26px;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
+/* FORM */
+.form{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/form.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+}
+.button-box{
+    width: 100px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggler-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        padding: 80px;
+    }
+}
 /* mobile devices */
-@media only screen and (max-width:850px){
-    nav{
+@media(max-width: 700px){
+    .about-section{
         padding: 0;
-
     }
-    .logo{
+    .inner-container{
+        padding: 60px;
+    }
+
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
         position: absolute;
-        top: 30px;
-        left: 30px;
-    }
-    nav ul{
-        flex-direction: column;
-        width: 100%;
+        background: crimson;
         height: 100vh;
-        justify-content: center;
-        background: whitesmoke;
-        margin-top: -900px;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
     }
-    .menu-icon{
-        margin-top: 0px;
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
     }
-    nav ul li{
-        margin: 30px auto;
-
+    .nav-links ul{
+        padding: 30px;
     }
 }
 
