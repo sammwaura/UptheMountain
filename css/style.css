@@ -138,11 +138,84 @@ button{
     margin-bottom: 5px;
     border: none;
     padding: 8px 15px;
-    background-color: tomato;
-    color: white;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+
+   
+
 }
 button:hover{
     text-decoration: underline;
+}
+/* Team */
+.team-section{
+    width: 100%;
+    text-align: center;
+}
+.team-section .container{
+    width: 80%;
+    margin: auto;
+
+}
+.team-section .container .row{
+    width: 60%;
+    margin: auto;
+}
+.team-section .container .row .title{
+    margin-top: 50px;
+}
+.team-section .container .row .title h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ff105f;
+}
+.team-section .container .row .title p{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 30px 0px;
+    color: thistle;
+}
+.team-section .container .team-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.team-section .container .team-card .card{
+    width: 100%;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+.team-section .container .team-card .card:hover{
+    background-color: #f3f3f3;
+    transition: 0.3s;
+}
+.team-section .container .team-card .card .img-section img{
+    height: 120px;
+    width: 150px;
+    border-radius: 50%;
+    border:6px solid #fff;
+}.team-section .container .team-card .card .content{
+    width: 100%;
+    text-align: center;
+}
+.team-section .container .team-card .card .content h3{
+    font-size: 27px;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: crimson;
+}
+.team-section .container .team-card .card .content p{
+    font-size: 15px;
+    margin:16px 0px;
+    line-height: 1.5;
+    color: #6c6c6c;
 }
 /* programs */
 .program{
@@ -188,39 +261,87 @@ button:hover{
     margin-bottom: 15px;
     text-align: left;
 }
-
-/* FORM */
-.form{
-    height: 100%;
+/* News Section */
+.news-section{
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../images/form.jpg);
-    background-position: center;
-    background-size: cover;
+}
+.news-section .section-content{
+    width: 85%;
+    margin: 20px auto;
+}
+.news-section .section-content .title{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.news-section .section-content .title h2{
+    font-size: 40px;
+    color: #ff105f;
+    text-transform: uppercase;
+}
+.news-section .section-content .title p{
+    font-size: 18px;
+    color: darkgray;
+    margin-top: 20px;
+}
+.news-section .section-content .cards{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+}
+.news-section .section-content .cards .card{
+    width: 100%;
+    background-color:cornsilk;
+    position: relative;
+}
+.news-section .section-content .cards .card img{
+    width: 100%;
+    height: auto;
+}
+.news-section .section-content .cards .card .article{
+    padding: 15px 20px;
+}
+
+.news-section .section-content .cards .card .article h4{
+    font-size: 24px;
+    color: #ff105f;
+}
+
+.news-section .section-content .cards .card .article p{
+    font-size: 16px;
+    margin:10px 0px;
+    color: gray;
+}
+
+.news-section .section-content .cards .card a{
+    text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(to right, #ff105f,#ffad06);
+    padding: 8px 1px;
+    margin-left: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.news-section .section-content .cards .card a:hover{
+    text-decoration: underline;
+}
+.news-section .section-content .cards .card .posted-date p{
+    font-weight: 600;
     position: absolute;
-}
-.form-box{
-    width: 380px;
-    height: 480px;
-    position: relative;
-    margin: 6% auto;
-    background: #fff;
-    padding: 5px;
-}
-.button-box{
-    width: 100px;
-    margin: 35px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
-    border-radius: 30px;
-}
-.toggler-btn{
-    padding: 10px 30px;
-    cursor: pointer;
+    top: 5px;
+    left: 0;
+    display: inline-block;
     background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
+    background-color: thistle;
+    padding: 6px 15px;
 }
+
+
+
+
+
 
 @media screen and (max-width:1200px){
     .inner-container{
