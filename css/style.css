@@ -99,28 +99,33 @@ nav .fa{
 }
 /* about us */
 .about-section{
-    margin-top: 25px;
-    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/new.jpg);
-    background-size: 50%;
-    background-color: rgb(162, 192, 197);
-    overflow: hidden;
-    padding: 100px 0;
-    background-size: cover;
+    width: 90%;
+    
 }
 
 .inner-container{
-    width: 30%;
-    float: right;
-    background:transparent;
-    padding: 150px;
-
+    width: 100%;
+    text-align: center;
 }
 
 .inner-container h1{
-    margin-bottom: 30px;
-    font-size: 30px;
     font-weight: bolder;
+	font-size: 35px;
+	position: relative;
+	margin: 40px 0;
+    color: crimson;
 
+}
+.inner-container h1::before{
+    content: '';
+	position: absolute;
+	width: 100px;
+	height: 4px;
+	background-color: #ffad06;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: animate 4s linear infinite;
 }
 .border{
     height: 3px;
@@ -128,12 +133,11 @@ nav .fa{
     background-color: tomato;
 }
 .text{
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
+    font-family: sans-serif;
+    margin: 30px 0px;
     color: black;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
 }
 button{
     margin-bottom: 5px;
@@ -146,36 +150,44 @@ button:hover{
 }
 /* Team */
 .team-section{
-    width: 100%;
-
+    width: 90%;
 }
-.team-section .container{
+
+.team-section .team-container{
+    width: 100%;
+    text-align: center;
+}
+.team-section .team-container h1{
+    font-weight: bolder;
+	font-size: 35px;
+	position: relative;
+	margin: 40px 0;
+    color: crimson;
+}
+.team-section .team-container h1::before{
+    content: '';
+	position: absolute;
+	width: 100px;
+	height: 4px;
+	background-color: #ffad06;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: animate 4s linear infinite;
+}
+.container{
     width: 80%;
     margin: auto;
+}
 
-}
-.team-section .container .row{
-    width: 60%;
-    margin: auto;
-}
-.team-section .container .row .title{
-    text-align: center;
-    margin-top: 50px;
-}
-.team-section .container .row .title h1{
-    font-size: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #ff105f;
-}
-.team-section .container .row .title p{
+.team-section  p{
     font-size: 18px;
     font-weight: bold;
     font-family: sans-serif;
     margin: 30px 0px;
     color: black;
 }
-.team-section .container .team-card{
+.team-section .team-card{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -219,16 +231,33 @@ button:hover{
 }
 /* programs */
 .program{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    margin-top: 20px;
-    text-align: center;
-    padding-top: 100px;
+    margin-top: 5px;
+    padding-top: 30px;
     background-color: cornsilk;
 }
+.program-container{
+    width: 100%;
+	text-align: center;
+}
 .program h1{
-    font-size: 35px;
+    font-weight: bolder;
+	font-size: 35px;
+	position: relative;
+	margin: 40px 0;
     color: crimson;
+}
+.program h1::before{
+    content: '';
+	position: absolute;
+	width: 100px;
+	height: 4px;
+	background-color: #ffad06;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: animate 4s linear infinite;
 }
 .program p{
     font-size: 18px;
@@ -271,10 +300,11 @@ button:hover{
 
 }
 .event-container h1{
-	font-weight: normal;
+	font-weight: bolder;
 	font-size: 35px;
 	position: relative;
 	margin: 40px 0;
+    color: crimson;
 
 }
 .event-container h1::before{
@@ -282,7 +312,7 @@ button:hover{
 	position: absolute;
 	width: 100px;
 	height: 3px;
-	background-color: crimson;
+	background-color: #ffad06;
 	bottom: -10px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -302,9 +332,9 @@ button:hover{
 }
 .top-content{
 	background: linear-gradient(to right, #ff105f,#ffad06);
-	width: 20%;
+	width: 30%;
 	margin: 0 auto 30px auto;
-	height: 60px;
+	height: 80px;
 	display: flex;
 	align-items: center;
 	border-radius: 6px;
@@ -314,17 +344,18 @@ button:hover{
 
 .top-content label{
 	display: inline-block;
-	/* height: 100%; */
-	margin: 0 10px;
-	line-height: 60px;
-	font-size: 18px;
+	height: 80%;
+	margin: 0 20px;
+	font-size: 25px;
+    font-weight: 700;
     background: linear-gradient(to right, #ff105f,#ffad06);
 	cursor: pointer;
 	transition: .5s;
 }
 
 .top-content label:hover{
-	color: black;
+	text-decoration: underline;
+    color: cornsilk;
 }
 
 .photo-gallery{
