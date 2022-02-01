@@ -9,7 +9,8 @@
     <link rel="preconnect" href="http://fonts.gstatic.com">
     <link href="htttp://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -34,6 +35,7 @@
                         </ul>
                     </div>
                 </li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#programs">Programs</a>
                 <div class='sub-menu'>
                     <ul>
@@ -54,7 +56,6 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="#campaigns">Campaigns</a></li>
                 </ul>
                 <i class="fa fa-bars" onclick="showMenu()"></i>
            </div>
@@ -91,9 +92,7 @@
     <div class="container">
         <div class="row">
             <div class="title"> 
-                <h1>
-                    Our Team
-                </h1>
+                <h1>Our Team</h1>
                 <p> This is our leadership team for the Up The Mountain Mission.</p>
             </div>
         </div>
@@ -104,8 +103,8 @@
                 </div>
                 <div class="content">
                     <h3>Kefa Wamichwe</h3>
-                    <h4>CEO</h4>
-                    <p>He is the Chief Executive Officer of the UpTheMountain Mission</p>
+                    <h4>Chairperson</h4>
+                    <p>He is the Chairperson  of the UpTheMountain Mission</p>
                 </div>
             </div>
             <div class="card">
@@ -184,63 +183,102 @@
     </div>
 </section>
 
-<!-- News Section -->
-<div class="news-section">
-    <div class="section-content">
-        <div class="title">
-            <h2>News</h2>
-            <p>Our news section and also a section for past and future activities</p>
+<!--Events Section -->
+
+    <input type="radio" name="Photos" id="check2">
+    <input type="radio" name="Photos" id="check3">
+
+    <div class="event-container">
+          <h1>EVENTS</h1>
+          <div class="top-content">
+            
+            <label for="check2">Previous Events</label>
+            <label for="check3">Upcoming Events</label>
+          </div>
+
+          <div class="photo-gallery">
+            <div class="pic place">
+              <img src="images/.jpg" class="img-fluid grow" alt="">
+            </div>
+
+              <div class="pic functions">
+              <img src="images/.jpg" class="img-fluid grow" alt="">
+            </div>
+
+              <div class="pic consultancy">
+              <img src="images/.jpg" class="img-fluid grow" alt="">
+            </div>
+
+             <div class="pic functions">
+              <img src="images/.png" class="img-fluid grow" alt="">
+            </div>
+
+             <div class="pic consultancy">
+              <img src="images/.jpg" class="img-fluid grow" alt="">
+            </div>
+
+            <div class="pic functions">
+              <img src="images/.jpg" class="img-fluid grow" alt="">
+            </div>
+
+
+          </div>
         </div>
-        <div class="cards">
-            <div class="card">
-                <div class="image-section">
-                    <img src="./images/conserving.jpg" alt="">
-                </div>
-                <div class="article">
-                    <h4>Conserving the Environment</h4>
-                    <p>This is a past activity where we planted a few trees as a way of 
-                        conserving the enviroment hence taking care of nature. </p>
-                </div>
-                <div class="news-view">
-                    <a href="" class="button">Read More</a>
-                </div>
-                <div class="posted-date">
-                    <p>Posted on Jan 15th 2022</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image-section">
-                    <img src="./images/teachings.jpg" alt="">
-                </div>
-                <div class="article">
-                    <h4>Bible Teachings</h4>
-                    <p>This is activity is scheduled to happen in the future. Date is yet to be confirmed </p>
-                </div>
-                <div class="news-view">
-                    <a href="" class="button">Read More</a>
-                </div>
-                <div class="posted-date">
-                    <p>Date to be confirmed</p>
+  
+   </section>
+<!-- Footer section -->
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <h2>About Us</h2>
+            <div class="content">
+                <p> UpTheMountain Mission is a spiritual mission that aims to promote Christian virtues. </p>
+                <div class="social">
+                    <a href="#"><span class="fa fa-facebook"></span></a>
+                    <a href="#"><span class="fa fa-twitter"></span></a>
+                    <a href="#"><span class="fa fa-instagram"></span></a>
+                    <a href="#"><span class="fa fa-youtube"></span></a>
                 </div>
             </div>
-            <div class="card">
-                <div class="image-section">
-                    <img src="./images/news.jpg" alt="">
+        </div>
+        <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+                <div class="place">
+                    <span class="fa fa-map-marker"></span>
+                    <span class="text">Nairobi, Kenya</span>
                 </div>
-                <div class="article">
-                    <h4>News</h4>
-                    <p>Currently there is no news </p>
+                <div class="phone">
+                    <span class="fa fa-phone"></span>
+                    <span class="text">+254 722863364</span>
                 </div>
-                <div class="news-view">
-                    <a href="" class="button">Read More</a>
+                <div class="email">
+                    <span class="fa fa-envelope"></span>
+                    <span class="text">Upthemountain@gmail.com</span>
                 </div>
-                <div class="posted-date">
-                    <p>date</p>
-                </div>
+            </div>
+        </div>
+        <div class="right xbox">
+            <h2>Contact Us</h2>
+            <div class="content">
+                <form action="#">
+                    <div class="email">
+                        <div class="text">Email</div>
+                        <input type="email" required>
+                    </div>
+                    <div class="msg">
+                        <div class="text">Message</div>
+                        <textarea cols="25" rows="2"></textarea>
+                    </div>
+                    <div class="btn">
+                        <button class="submit">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
+</footer>
+
 
 
 
