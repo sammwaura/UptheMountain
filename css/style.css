@@ -4,6 +4,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .header{
     min-height: 100vh;
     width: 100%;
@@ -97,6 +98,12 @@ nav ul li:hover .sub-menu ul li:hover{
 nav .fa{
     display: none;
 }
+marquee {
+    background: thistle;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
 /* about us */
 .about-section{
     width: 90%;
@@ -382,7 +389,7 @@ button:hover{
 }
 
 .pic::before{
-	content: 'PHOTO GALLERY';
+	content: '';
 	position: absolute;
 	top: 50%;
 	left: 50%;
