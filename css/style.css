@@ -14,18 +14,21 @@
     background-size: cover;
     position: relative;
 }
+img {
+    width: 150px;
+    
+}
 nav{
     padding: 2% 6%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: linear-gradient(to right, #ff105f,#ffad06);
 }
-nav img{
-    width: 150px;
-}
+
 .nav-links{
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 .nav-links ul li{
     list-style: none;
@@ -69,6 +72,7 @@ nav ul li:hover .sub-menu ul li{
     background: transparent;
     border-radius: 0;
     text-align: left;
+    font-size: 18px;
 }
 nav ul li:hover .sub-menu ul li:last-child{
     border-bottom: none;
@@ -79,6 +83,7 @@ nav ul li:hover .sub-menu ul li:hover{
 .text-box{
     width: 90%;
     margin: auto;
+    margin-top: 10%;
     position: absolute;
     text-align: center;
     color: #fff;
@@ -87,11 +92,11 @@ nav ul li:hover .sub-menu ul li:hover{
     transform: translate(-50%,-50%);
 }
 .text-box h1{
-    font-size: 62px;
+    font-size: 68px;
 }
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 18px;
+    font-size: 28px;
     color: yellow;
     
 }
@@ -99,7 +104,7 @@ nav .fa{
     display: none;
 }
 marquee {
-    background: thistle;
+    background: #ffad06;
     padding-bottom: 10px;
     font-size: 20px;
 }
@@ -147,7 +152,10 @@ marquee {
     color: black;
 }
 button{
+    text-align: center;
     margin-bottom: 5px;
+    font-weight: bolder;
+    font-size: 18px;
     border: none;
     padding: 8px 15px;
     background: linear-gradient(to right, #ff105f,#ffad06);
