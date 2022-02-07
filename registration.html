@@ -11,7 +11,7 @@
         <div class="main">
             <div class="register">
                 <h2>Register for Events Upcoming </h2>
-                <form action="connect.php"  method="POST" id="register">
+                <form name="register" action="connect.php"  method="post" id="register">
                     <label>First Name : </label>
                     <br>
                     <input type="text" name="firstname" id="name" placeholder="Enter Your First Name">
@@ -40,34 +40,34 @@
                     <label>How did you find us? : </label>
                     <br>
                     &nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="F" id="male">&nbsp;
+                    <input type="radio" name="find" value="F" id="friend">&nbsp;
                     <span id="friend">Friend</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="C" id="male">&nbsp;
+                    <input type="radio" name="find" value="C" id="church">&nbsp;
                     <span id="church">Church</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="S" id="male">&nbsp;
+                    <input type="radio" name="find" value="S" id="socialmedia">&nbsp;
                     <span id="socialmedia">Social Media</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="O" id="male">&nbsp;
+                    <input type="radio" name="find" value="O" id="other">&nbsp;
                     <span id="other">Other</span>
                     <br><br>
                     <label>Which Event Are You Going : </label>
                     <br>
                     &nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="F" id="male">&nbsp;
-                    <span id="friend">Mt Kenya</span>
+                    <input type="radio" name="going" value="K" id="MtKenya">&nbsp;
+                    <span id="MtKenya">Mt Kenya</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="C" id="male">&nbsp;
-                    <span id="church">Mt Elgon</span>
+                    <input type="radio" name="going" value="E" id="MtElgon">&nbsp;
+                    <span id="MtElgon">Mt Elgon</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="S" id="male">&nbsp;
-                    <span id="socialmedia">Abardare</span>
+                    <input type="radio" name="going" value="A" id="Abardare">&nbsp;
+                    <span id="Abardare">Abardare</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="find" value="O" id="male">&nbsp;
-                    <span id="other">Mt Kilimambogo</span>
+                    <input type="radio" name="going" value="M" id="MtKilimanjaro">&nbsp;
+                    <span id="MtKilimanjaro">Mt Kilimambogo</span>
                     <br><br>
-                    <input type="submit" value="Submit" name="submit" id="submit">
+                    <input type="button" value="Submit" name="submit" id="submit" onClick="submit()">
                 </form>
             </div>
         </div>
