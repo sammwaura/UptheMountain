@@ -14,7 +14,28 @@
     background-size: cover;
     position: relative;
 }
+.info{
+    float:right;
+    height: 50px;
+    font-size: smaller;
+}
+
+.header-content .place .text{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.header-content .phone .text{
+    color: whitesmoke;
+    font-size: 15px;
+}
+.header-content .email .text{
+    color: whitesmoke;
+    font-size: 15px;
+}
 img {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 15px;
     width: 150px;
     
 }
@@ -53,6 +74,14 @@ nav{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+
+.nav-links .social{
+    float: right;
+    margin-right: 5%;
+    color: black;
+    padding: 13px;
+
+}
 .sub-menu{
     display: none;
 }
@@ -80,6 +109,28 @@ nav ul li:hover .sub-menu ul li:last-child{
 nav ul li:hover .sub-menu ul li:hover{
     color: crimson;
 }
+.social-media1{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 0px;
+    margin-top: 50px;
+}
+.social-media1 a{
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    line-height: 39px;
+    display:list-item;
+    border-radius: 50%;
+    border: 2px solid #ffad06;
+    color: #f3f3f3;
+}
+.social-media1 a:hover{
+    background-color: #ff105f;
+}
+
 .text-box{
     width: 90%;
     margin: auto;
@@ -426,6 +477,7 @@ button:hover{
  }
  .pic:hover::after{
  	height: 100%;
+     width: 100%;
  }
  .pic:hover::before{
  	margin-top: 0;
@@ -467,6 +519,11 @@ footer{
     text-transform: uppercase;
     color: crimson;
 }
+.map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
 .box .content{
     margin: 20px 0 0 0;
 
@@ -477,9 +534,6 @@ footer{
     font-weight: bold;
     color: thistle;
 
-}
-.left .content .social{
-    margin: 20px 0 0 0;
 }
 .content .place .text{
     color: whitesmoke;
@@ -493,22 +547,37 @@ footer{
     color: whitesmoke;
     font-size: 20px;
 }
-.left .content .social a{
-    padding: 0 2px;
-}
-.left .content .social a span{
-    height: 40px;
-    width: 40px;
-    background: cornsilk;
-    line-height: 40px;
+.social-media{
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: 0.3s;
+    padding: 40px;
+    padding-bottom: 0px;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
 }
-.left .content .social a span:hover{
-    background: linear-gradient(to right, #ff105f,#ffad06);
+.social-media a{
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    line-height: 39px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    color: #f3f3f3;
 }
+.social-media a:hover{
+    background-color: #ff105f;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 5%;
+    font-size: large;
+    color: yellow;
+}
+
+
 
 
 
