@@ -543,6 +543,10 @@ footer{
     color: whitesmoke;
     font-size: 20px;
 }
+.content .name .text{
+    color: whitesmoke;
+    font-size: 20px;
+}
 .content .email .text{
     color: whitesmoke;
     font-size: 20px;

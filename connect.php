@@ -1,34 +1,48 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$db = "register";
 
-$con = new mysqli($host, $username, $password, $db);
-if(!$con){
-    echo "There are some problems while connecting to the database";
-}
-// get data from the form
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$mobile = $_POST['mobile'];
-$email = $_POST['email'];
-$gender = $_POST['gender'];
-$find = $_POST['find'];
-$going = $_POST['going'];
+$firstname = filter_input(INPUT_POST, 'firstname');
+$lastname = filter_input(INPUT_POST, 'lastname');
+$mobile = filter_input(INPUT_POST, 'mobile');
+$email = filter_input(INPUT_POST, 'email');
+$gender = filter_input(INPUT_POST, 'gender');
+$find = filter_input(INPUT_POST, 'find');
+$going = filter_input(INPUT_POST, 'going');
 
-// insert to database
-$query = "INSERT INTO `registration`(`firstname`, `lastname`, `mobile`, `email`, `gender`, `find`, `going`) 
-                VALUES ('$firstname', '$lastname', $mobile, '$email', '$gender', '$find', '$going')"
-$insert = mysqli_query($con, $query);
-if(!$insert) {
-    echo "There are some problems while inserting data"
+if(!empty($firstname)){
+    if(!empty($lastname)){
+        $host = "localhost";
+        $dbusername = "root";
+        $dbpassword = "";
+        $dbname = "register";
+        // create connection
+        $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+
+        if(mysqli_connect_error()){
+            die('Connect Error ('. mysqli_connect_errno() .') '
+            . mysqli_connect_error());
+        }
+        else{
+            $sql = "INSERT INTO registration (firstname, lastname, mobile, email, gender, find, going) 
+            values ('$firstname', '$lastname', $mobile, '$email', '$gender', '$find', '$going')";
+            if($conn->query($sql)){
+                echo "New record is inserted successfully";
+            }
+            else{
+                echo "Error: ". $sql ."<br>". $conn->error;
+            }
+            $conn->close();
+        }
+
+    }else{
+        echo "Lastname should not be empty";
+        die();
+    }
+
 }
 else{
-    echo "Data inserted";
+    echo "Firstname should not be empty";
+    die();
 }
-
- ?>
-
+?>
 
 

@@ -267,17 +267,21 @@
                 </div>
             </div>
         </div>
-        <div class="right xbox">
+        <div class="right box">
             <h2>Contact Us</h2>
             <div class="content">
-                <form action="#">
+                <form action="contact.php" method="post">
+                    <div class="name">
+                        <div class="text">Your Name:</div>
+                        <input type="name" name="name" required> 
+                    </div>
                     <div class="email">
-                        <div class="text">Email</div>
-                        <input type="email" required>
+                        <div class="text">Your Email:</div>
+                        <input type="email" name="email" required>
                     </div>
                     <div class="msg">
-                        <div class="text">Message</div>
-                        <textarea cols="25" rows="2"></textarea>
+                        <div class="text">Message:</div>
+                        <textarea cols="35" rows="5" name="msg"></textarea>
                     </div>
                     <div class="btn">
                         <button class="submit">Send</button>
