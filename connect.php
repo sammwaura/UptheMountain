@@ -1,48 +1,26 @@
 <?php
 
-$firstname = filter_input(INPUT_POST, 'firstname');
-$lastname = filter_input(INPUT_POST, 'lastname');
-$mobile = filter_input(INPUT_POST, 'mobile');
-$email = filter_input(INPUT_POST, 'email');
-$gender = filter_input(INPUT_POST, 'gender');
-$find = filter_input(INPUT_POST, 'find');
-$going = filter_input(INPUT_POST, 'going');
+include_once 'db.php';
+if(isset($_POST['submit']))
+{    
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $mobile = $_POST['mobile'];
+    $email = $_POST['email'];
+    $gender = $_POST['gender'];
+    $find = $_POST['find'];
+    $going = $_POST['going'];
 
-if(!empty($firstname)){
-    if(!empty($lastname)){
-        $host = "localhost";
-        $dbusername = "root";
-        $dbpassword = "";
-        $dbname = "register";
-        // create connection
-        $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
-
-        if(mysqli_connect_error()){
-            die('Connect Error ('. mysqli_connect_errno() .') '
-            . mysqli_connect_error());
-        }
-        else{
-            $sql = "INSERT INTO registration (firstname, lastname, mobile, email, gender, find, going) 
-            values ('$firstname', '$lastname', $mobile, '$email', '$gender', '$find', '$going')";
-            if($conn->query($sql)){
-                echo "New record is inserted successfully";
-            }
-            else{
-                echo "Error: ". $sql ."<br>". $conn->error;
-            }
-            $conn->close();
-        }
-
-    }else{
-        echo "Lastname should not be empty";
-        die();
-    }
-
+   $sql = "INSERT INTO `registration`(`firstname`, `lastname`, `mobile`, `email`, `gender`, `find`, `going`)
+                values ($firstname', '$lastname', $mobile, '$email', '$gender', '$find', '$going')";
+     if (mysqli_query($conn, $sql)) {
+        echo "New record has been added successfully !";
+     } else {
+        echo "Error: " . $sql . ":-" . mysqli_error($conn);
+     }
+     mysqli_close($conn);
 }
-else{
-    echo "Firstname should not be empty";
-    die();
-}
+
 ?>
 
 
