@@ -1,4 +1,3 @@
-
 <?php
     $servername='localhost';
     $username='root';
@@ -6,6 +5,6 @@
     $dbname = "register";
     $conn=mysqli_connect($servername,$username,$password,"$dbname");
       if(!$conn){
-          die();
+          die('Could not Connect MySql Server:' .mysql_error());
         }
 ?>
