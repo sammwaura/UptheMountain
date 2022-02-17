@@ -1,6 +1,7 @@
 <?php
 
 include_once 'db.php';
+
 if(isset($_POST['submit']))
 {    
     $firstname = $_POST['firstname'];
@@ -11,15 +12,15 @@ if(isset($_POST['submit']))
     $find = $_POST['find'];
     $going = $_POST['going'];
 
-   $sql = "INSERT INTO `registration`(`firstname`, `lastname`, `mobile`, `email`, `gender`, `find`, `going`)
-                values ($firstname', '$lastname', $mobile, '$email', '$gender', '$find', '$going')";
+   $sql = "INSERT INTO registration (`id`,`firstname`, `lastname`, `mobile`, `email`, `gender`, `find`, `going`) 
+   VALUES ('0', $firstname','$lastname',$mobile,'$email','$gender','$find','$going')";
      if (mysqli_query($conn, $sql)) {
-        echo "New record has been added successfully !";
+        echo '<script>alert("New record has been added successfully")</script>';
+        echo ("<script>location.href='registration.html'</script>");
      } else {
-        echo "Error: " . $sql . ":-" . mysqli_error($conn);
+        echo "Error: " . $sql . ":-" .mysqli_error($conn);
      }
-     mysqli_close($conn);
-}
+   }
 
 ?>
 
