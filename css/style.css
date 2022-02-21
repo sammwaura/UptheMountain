@@ -156,12 +156,12 @@ nav ul li a .sub-menu:hover{
     font-size: 54px;
     text-shadow: 0 0 2px #6c6c6c;
     font-weight: bold;
-    color: crimson;
+    color:mediumturquoise;
 }
 .text-box p{
     margin: 10px 0 40px;
     font-size: 22px;
-    color: aqua;
+    color:salmon;
 }
 nav .fa{
     display: none;
