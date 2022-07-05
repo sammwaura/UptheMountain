@@ -4,7 +4,11 @@
 }
 
 body{
+<<<<<<< HEAD
     background-color: cornsilk;
+=======
+    background: linear-gradient(to right, #ff105f,#ffad06);
+>>>>>>> 1f28b08 (modify files packages)
     background-size: cover;
 }
 .main{
@@ -18,17 +22,32 @@ h2{
     font-family: sans-serif;
 }
 .register{
+<<<<<<< HEAD
     background: linear-gradient(to right, #ff105f,#ffad06);
+=======
+    background: #fff;
+>>>>>>> 1f28b08 (modify files packages)
     width: 100%;
     font-size: 18px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+<<<<<<< HEAD
     color: #fff;
+=======
+   
+>>>>>>> 1f28b08 (modify files packages)
 }
 form #register{
     margin: 40px;
 }
+<<<<<<< HEAD
+=======
+/* .register form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+} */
+>>>>>>> 1f28b08 (modify files packages)
 label{
     font-family: sans-serif;
     font-size: 18px;
