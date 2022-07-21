@@ -9,11 +9,11 @@ if(isset($_POST['submit']))
     $mobile = $_POST['mobile'];
     $email = $_POST['email'];
     $gender = $_POST['gender'];
-    $find = $_POST['find'];
-    $going = $_POST['going'];
+    $payment = $_POST['payment'];
 
-   $sql = "INSERT INTO registration (`firstname`, `lastname`, `mobile`, `email`, `gender`, `find`, `going`)
-         VALUES ('$firstname', '$lastname', '$mobile', '$email', '$gender', '$find', '$going')";
+
+   $sql = "INSERT INTO mountain (`Id`, `firstname`, `lastname`, `mobile`, `email`, `gender`, `payment`)
+         VALUES ('0', '$firstname', '$lastname', '$mobile', '$email', '$gender', '$payment')";
          
      if (mysqli_query($conn, $sql)) {
         echo '<script>alert("New record has been added successfully")</script>';
